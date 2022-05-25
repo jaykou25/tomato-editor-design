@@ -7,7 +7,7 @@ export default createTheme({
   logo: <div style={{ fontSize: '20px' }}>🍅 Tomato Editor Design</div>,
   topNavs: [
     {
-      label: 'Index',
+      label: '首页',
       path: '/',
       activeIfMatch: {
         // match all first-level paths
@@ -16,7 +16,7 @@ export default createTheme({
       },
     },
     {
-      label: 'Components',
+      label: '组件',
       path: '/components/Button',
       activeIfMatch: '/components',
     },

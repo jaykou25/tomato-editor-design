@@ -1,15 +1,32 @@
 {
-  "name": "tomato-editor-design",
+  "name": "@jay.kou/tomato-editor-design",
   "description": "番茄编辑器组件",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "./dist/tomato-editor-design.umd.js",
+  "module": "./dist/tomato-editor-design.es.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/tomato-editor.es.js",
+      "require": "./dist/tomato-editor.umd.js"
+    }
+  },
   "scripts": {
     "dev": "cross-env SHOW_ALL_COMPONENT_DEMOS=true vite serve docs",
     "dev2": "vite serve docs",
-    "build": "rm -rf docs/dist && vite build docs && serve -s docs/dist",
+    "docBuild": "rm -rf docs/dist && vite build docs && serve -s docs/dist",
+    "build": "rm -rf dist/* && tsc && vite build",
+    "publish": "npm publish --access public",
     "ssr": "rm -rf docs/dist && vite-pages ssr docs && serve docs/dist"
   },
   "dependencies": {
+    "@jay.kou/tomato-editor": "^0.1.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"
@@ -25,6 +42,7 @@
     "cross-env": "^7.0.3",
     "postcss": "^8.2.15",
     "serve": "^12.0.1",
+    "typescript": "^4.7.2",
     "vite": "^2.5.6",
     "vite-pages-theme-doc": "^3.1.4",
     "vite-plugin-mdx": "^3.5.6",
