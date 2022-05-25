@@ -1,8 +1,8 @@
 {
-  "name": "my-lib",
-  "description": "suppose this npm package name is 'my-lib'",
+  "name": "tomato-editor-design",
+  "description": "番茄编辑器组件",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.1",
   "scripts": {
     "dev": "cross-env SHOW_ALL_COMPONENT_DEMOS=true vite serve docs",
     "dev2": "vite serve docs",

@@ -4,7 +4,7 @@ import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
 import Component404 from './404'
 
 export default createTheme({
-  logo: <div style={{ fontSize: '20px' }}>📘 Vite Pages</div>,
+  logo: <div style={{ fontSize: '20px' }}>🍅 Tomato Editor Design</div>,
   topNavs: [
     {
       label: 'Index',
@@ -20,10 +20,9 @@ export default createTheme({
       path: '/components/Button',
       activeIfMatch: '/components',
     },
-    { label: 'Vite', href: 'https://github.com/vitejs/vite' },
     {
-      label: 'Vite Pages',
-      href: 'https://github.com/vitejs/vite-plugin-react-pages',
+      label: 'github',
+      href: 'https://github.com/jaykou25/tomato-editor-design',
     },
   ],
   sideNavs: (ctx) => {
