@@ -1,13 +1,12 @@
 /**
- * @title Button Demo2 Title
- * @description Button demo2 description
+ * @title type primary
  */
 
 import React from 'react'
 import { Button } from 'my-lib'
 
 const Demo2 = () => {
-  return <Button>demo2</Button>
+  return <Button type="primary">Primary</Button>
 }
 
 export default Demo2

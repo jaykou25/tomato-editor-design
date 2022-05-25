@@ -1,0 +1,105 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  z-index: @zIndex1000;
+  transition: opacity 0.15s linear;
+  display: none;
+}
+
+.backdropShow {
+  display: block;
+}
+
+.backdropVisible {
+  opacity: 0.5;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: @zIndex1001;
+  display: none;
+  opacity: 1;
+}
+
+.overlayShow {
+  display: block;
+}
+
+.dialog {
+  margin: 0.5rem auto;
+  min-width: 50%;
+  overflow-x: hidden;
+  min-height: calc(100% - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, -50px);
+  transition: transform 0.35s ease-out, opacity 0.35s;
+  opacity: 0;
+}
+
+.dialogVisible {
+  transform: none;
+  opacity: 1;
+}
+
+.content {
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  outline: 0;
+  color: black;
+  min-width: 350px;
+}
+
+.title {
+  padding: 16px;
+  font-size: 0.16rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.confirmTitle {
+  padding: 26px;
+  font-size: 0.18rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.confirmTitle svg {
+  color: @colorSecondary;
+  font-size: 0.2rem;
+  margin-right: 8px;
+}
+
+.body {
+  padding: 16px;
+}
+
+.confirmBody {
+  padding: 0 40px;
+}
+
+.footer {
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.confirmFooter {
+  padding: 26px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -30,11 +30,11 @@ export default createTheme({
       groupConfig: {
         components: {
           demos: {
-            label: 'Demos (dev only)',
+            label: '所有组件 (测试用)',
             order: -1,
           },
           general: {
-            label: 'General',
+            label: '通用',
             order: 1,
           },
           'data-display': {

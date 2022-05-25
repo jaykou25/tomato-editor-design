@@ -1,18 +1,44 @@
 import React from 'react'
-import s from './style.module.css'
+import cs from 'classnames'
+import { RiLoader4Fill } from 'react-icons/ri'
+import { ButtonProps } from './types'
 
-interface Props
-  extends React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {}
+import styles from './style.module.css'
 
-const Button = ({ className, ...props }: Props) => {
+function Button(props: ButtonProps) {
+  const {
+    type = 'default',
+    size = 'default',
+    children,
+    onClick,
+    style,
+    loading = false,
+  } = props
   return (
-    <button
-      {...props}
-      className={[s.button, className].filter(Boolean).join(' ')}
-    />
+    <div
+      style={style}
+      className={cs({
+        [styles.wrapper]: true,
+        [styles.typeDefault]: type === 'default',
+        [styles.typePrimary]: type === 'primary',
+        [styles.sizeDefault]: size === 'default',
+        [styles.sizeSmall]: size === 'small',
+      })}
+      onClick={(e) => {
+        if (loading) return
+
+        if (onClick) onClick(e)
+      }}
+    >
+      <div className={styles.inner}>
+        {loading && (
+          <span className={styles.loader}>
+            <RiLoader4Fill />
+          </span>
+        )}
+        <span>{children}</span>
+      </div>
+    </div>
   )
 }
 

@@ -6,12 +6,12 @@ export interface ButtonProps {
    * the type of button
    * @defaultValue 'default'
    */
-  type?: 'primary' | 'default' | 'text'
+  type?: 'primary' | 'default'
   /**
    * the size of button
    * @defaultValue 'middle'
    */
-  size?: 'large' | 'middle' | 'small'
+  size?: 'small' | 'default'
   /**
    * loading state of button
    * @defaultValue false
@@ -22,7 +22,11 @@ export interface ButtonProps {
    */
   onClick?: (event: React.MouseEvent) => void
   /**
-   * button content
+   * children
    */
   children: React.ReactNode
+  /**
+   * style
+   */
+  style?: any
 }

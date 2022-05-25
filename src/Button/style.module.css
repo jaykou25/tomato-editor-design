@@ -1,4 +1,62 @@
-.button {
-  border: 1px solid red;
-  color: blue;
+.wrapper {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.typeDefault {
+  color: hsla(120, 75%, 39%, 1);
+  background-color: #fff;
+}
+
+.typeDefault:active {
+  background-color: #e6e6e6;
+}
+
+.typePrimary {
+  background-color: hsla(120, 75%, 39%, 1);
+  color: #fff;
+}
+
+.sizeDefault {
+  padding: 0.08rem 0.16rem;
+  font-size: 0.14rem;
+  min-width: 45px;
+}
+
+.sizeSmall {
+  padding: 0.04rem 0.08rem;
+  font-size: 0.12rem;
+  min-width: 45px;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  font-size: 0;
+  margin-right: 3px;
+}
+
+.loader > svg {
+  font-size: 14px;
+  animation: rotate 1s steps(36, end) infinite;
+  mask-image: -webkit-linear-gradient(top, #000000 8%, rgba(0, 0, 0, 0.3) 95%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
