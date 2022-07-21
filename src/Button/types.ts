@@ -1,32 +1,39 @@
+import type { ReactNode } from 'react'
+
 /**
  * This is the description of the Button component's props
  */
 export interface ButtonProps {
   /**
-   * the type of button
+   * 设置按钮类型
    * @defaultValue 'default'
    */
   type?: 'primary' | 'default'
   /**
-   * the size of button
-   * @defaultValue 'middle'
+   * 设置按钮大小
+   * @defaultValue 'default'
    */
   size?: 'small' | 'default'
   /**
-   * loading state of button
+   * 设置按钮载入状态
    * @defaultValue false
    */
   loading?: boolean
   /**
-   * click handler
+   * 点击按钮时的回调
    */
   onClick?: (event: React.MouseEvent) => void
   /**
    * children
    */
-  children: React.ReactNode
+  children: ReactNode
   /**
-   * style
+   * 设置按钮样式
    */
   style?: any
+
+  /**
+   * ref
+   */
+  forwardedRef?: any
 }

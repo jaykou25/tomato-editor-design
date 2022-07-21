@@ -2,7 +2,7 @@
   "name": "@jay.kou/tomato-editor-design",
   "description": "番茄编辑器组件",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.9",
   "license": "ISC",
   "files": [
     "dist",
@@ -11,22 +11,15 @@
   "main": "./dist/tomato-editor-design.umd.js",
   "module": "./dist/tomato-editor-design.es.js",
   "typings": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/tomato-editor.es.js",
-      "require": "./dist/tomato-editor.umd.js"
-    }
-  },
   "scripts": {
-    "dev": "cross-env SHOW_ALL_COMPONENT_DEMOS=true vite serve docs",
-    "dev2": "vite serve docs",
+    "dev": "cross-env SHOW_ALL_COMPONENT_DEMOS=false vite serve docs",
     "docBuild": "rm -rf docs/dist && vite build docs && serve -s docs/dist",
-    "build": "rm -rf dist/* && tsc && vite build",
+    "build": "rm -rf dist/* && vite build",
     "publish": "npm publish --access public",
     "ssr": "rm -rf docs/dist && vite-pages ssr docs && serve docs/dist"
   },
   "dependencies": {
-    "@jay.kou/tomato-editor": "^0.1.4",
+    "@jay.kou/tomato-editor": "^0.1.6",
     "classnames": "^2.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -17,12 +17,13 @@
 }
 
 .typePrimary {
-  background-color: hsla(120, 75%, 39%, 1);
+  /* background-color: hsla(120, 75%, 39%, 1); */
+  background-color: var(--van-primary-color);
   color: #fff;
 }
 
 .sizeDefault {
-  padding: 0.08rem 0.16rem;
+  padding: 8px 16px;
   font-size: 0.14rem;
   min-width: 45px;
 }

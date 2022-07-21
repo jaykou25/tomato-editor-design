@@ -5,8 +5,15 @@
 import React from 'react'
 import TomatoEditor from '@jay.kou/tomato-editor'
 
+const initialValue = [
+  {
+    type: 'paragraph',
+    children: [{ text: 'hello tomato ' }],
+  },
+]
+
 const Editor = () => {
-  return <TomatoEditor />
+  return <TomatoEditor initialValue={initialValue} />
 }
 
 export default Editor

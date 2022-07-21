@@ -61,6 +61,7 @@ module.exports = {
   resolve: {
     alias: {
       'my-lib': path.join(__dirname, '../src'),
+      '@jay.kou/tomato-editor-design': path.resolve(__dirname, '../src'),
     },
   },
 } as UserConfig

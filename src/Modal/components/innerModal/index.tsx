@@ -1,9 +1,9 @@
-import { Component, createRef } from 'react'
+import React, { Component, createRef } from 'react'
 import ReactDOM from 'react-dom'
-import styles from './styles.less'
+import styles from './styles.module.css'
 import cs from 'classnames'
-import TButton from '@/components/tButton'
-import { MyModalProps } from '../..'
+import { Button } from '@jay.kou/tomato-editor-design'
+import type { MyModalProps } from '../../types'
 import { IoInformationCircle } from 'react-icons/io5'
 
 interface InnerModalState {
@@ -227,19 +227,19 @@ class InnerModal extends Component<MyModalProps, InnerModalState> {
                   this.props.option ? styles.confirmFooter : styles.footer
                 )}
               >
-                <TButton
+                <Button
                   style={{ marginRight: '10px' }}
                   onClick={this.handleClose}
                 >
                   取消
-                </TButton>
-                <TButton
+                </Button>
+                <Button
                   type="primary"
                   loading={this.props.option ? false : this.props.footerLoading}
                   onClick={this.handleOk}
                 >
                   确认
-                </TButton>
+                </Button>
               </div>
             </div>
           </div>

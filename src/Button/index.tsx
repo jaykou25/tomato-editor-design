@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import cs from 'classnames'
 import { RiLoader4Fill } from 'react-icons/ri'
 import { ButtonProps } from './types'
@@ -13,9 +13,12 @@ function Button(props: ButtonProps) {
     onClick,
     style,
     loading = false,
+    forwardedRef,
+    ...rest
   } = props
   return (
     <div
+      ref={forwardedRef}
       style={style}
       className={cs({
         [styles.wrapper]: true,
@@ -29,6 +32,7 @@ function Button(props: ButtonProps) {
 
         if (onClick) onClick(e)
       }}
+      {...rest}
     >
       <div className={styles.inner}>
         {loading && (
@@ -42,4 +46,13 @@ function Button(props: ButtonProps) {
   )
 }
 
-export default Button
+const ForwardBtn = forwardRef((props: ButtonProps, ref: any) => {
+  const { children, ...rest } = props
+  return (
+    <Button {...rest} forwardedRef={ref}>
+      {children}
+    </Button>
+  )
+})
+
+export default ForwardBtn

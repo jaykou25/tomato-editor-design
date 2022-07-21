@@ -1,0 +1,22 @@
+.overlay {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0;
+  z-index: var(--zindex-1);
+
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--line-light);
+  filter: drop-shadow(0 6px 14px rgba(31, 35, 41, 0.13));
+}
+
+.overlayShow {
+  opacity: 1;
+  z-index: --zindex9;
+  /* transform: translateY(var(--translateY)); */
+  transition: opacity 0.15s 0.017s, z-index 0.15s 0.017s, transform 0.15s 0.017s;
+}
+
+.trigger {
+  cursor: pointer;
+}

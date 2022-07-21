@@ -3,10 +3,12 @@ title: Modal 对话框
 subGroup: general
 ---
 
-# Button
+# Modal 对话框
 
-This is a **markdown** document of the `Button` component.
+## 代码演示
 
-You can put this page in a subGroup of the side menu using `staticData.subGroup`.
+<Demo src="./demos/basic.tsx" />
 
-## Demos
+## API
+
+<TsInfo src="./types.ts" name="MyModalProps" />
