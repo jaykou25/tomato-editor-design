@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@jay.kou/tomato-editor-design': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   build: {

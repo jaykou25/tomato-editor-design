@@ -1,6 +1,7 @@
 {
-  "include": ["src/", "declare.d.ts"],
+  "include": ["src/", "declare.d.ts", "cypress/support/component.ts"],
   "compilerOptions": {
+    "types": ["cypress"],
     "target": "ES2019",
     "baseUrl": ".",
     "jsx": "react",
