@@ -23,14 +23,20 @@
 }
 
 .sizeDefault {
-  padding: 8px 16px;
-  font-size: 0.14rem;
+  padding: 6px 14px;
+  font-size: 14px;
   min-width: 45px;
 }
 
 .sizeSmall {
-  padding: 0.04rem 0.08rem;
-  font-size: 0.12rem;
+  padding: 4px 10px;
+  font-size: 12px;
+  min-width: 45px;
+}
+
+.sizeMini {
+  padding: 2px 8px;
+  font-size: 11px;
   min-width: 45px;
 }
 

@@ -26,6 +26,7 @@ function Button(props: ButtonProps) {
         [styles.typePrimary]: type === 'primary',
         [styles.sizeDefault]: size === 'default',
         [styles.sizeSmall]: size === 'small',
+        [styles.sizeMini]: size === 'mini',
       })}
       onClick={(e) => {
         if (loading) return

@@ -32,6 +32,10 @@ export default class MySlideCard extends Component<
     offset: 0,
     defaultPosition: 'top',
     avoidTop: 0,
+    zIndex: 1000,
+    hasMask: false,
+    maskIndex: 1000,
+    maskBackground: 'rgba(0,0,0,0)',
   }
 
   constructor(props) {
@@ -110,21 +114,31 @@ export default class MySlideCard extends Component<
   }
 
   render() {
-    const { visible, zIndex } = this.props
+    const { visible, zIndex, maskIndex, maskBackground, hasMask, onClose } =
+      this.props
     const { position } = this.state
 
     return ReactDOM.createPortal(
-      <div
-        ref={this.overlayRef}
-        style={{
-          left: position.left,
-          top: position.top,
-          zIndex: zIndex ? zIndex : 'unset',
-        }}
-        className={cs(styles.overlay, visible && styles.overlayShow)}
-      >
-        {/* 销毁content dom */}
-        {visible && this.props.content}
+      <div>
+        {visible && hasMask && (
+          <div
+            className={styles.mask}
+            style={{ zIndex: maskIndex, backgroundColor: maskBackground }}
+            onClick={() => onClose && onClose()}
+          ></div>
+        )}
+        <div
+          ref={this.overlayRef}
+          style={{
+            left: position.left,
+            top: position.top,
+            zIndex: visible && zIndex,
+          }}
+          className={cs(styles.overlay, visible && styles.overlayShow)}
+        >
+          {/* 销毁content dom */}
+          {visible && this.props.content}
+        </div>
       </div>,
       this.container
     )

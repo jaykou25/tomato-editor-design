@@ -12,6 +12,8 @@
       "@jay.kou/tomato-editor-design": ["./src"]
     },
     "declaration": true,
+    "declarationDir": "dist/types",
+    "skipLibCheck": true,
     "emitDeclarationOnly": true,
     "outDir": "dist",
     "esModuleInterop": true

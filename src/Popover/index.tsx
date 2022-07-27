@@ -20,6 +20,7 @@ export default class Popover extends Component<
     offset: 0,
     defaultPosition: 'top',
     avoidTop: 0,
+    zIndex: 1000,
   }
 
   constructor(props) {

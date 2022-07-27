@@ -13,7 +13,7 @@ export interface ButtonProps {
    * 设置按钮大小
    * @defaultValue 'default'
    */
-  size?: 'small' | 'default'
+  size?: 'small' | 'default' | 'mini'
   /**
    * 设置按钮载入状态
    * @defaultValue false

@@ -9,6 +9,8 @@ subGroup: general
 
 <Demo src="./demos/btnType.tsx" />
 
+<Demo src="./demos/btnSize.tsx" />
+
 ## API
 
 <TsInfo src="./types.ts" name="ButtonProps" />

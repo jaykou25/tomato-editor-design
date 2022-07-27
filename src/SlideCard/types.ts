@@ -21,6 +21,27 @@ export interface MySlideCardProps {
    */
   avoidTop?: number //
   zIndex?: number
+  /**
+   * 是否有遮罩层
+   * @defaultValue false
+   */
+  hasMask?: boolean
+
+  /**
+   * 遮罩层的z-index
+   * @defaultValue 1000
+   */
+  maskIndex?: number
+
+  /**
+   * 遮罩层的背景
+   */
+  maskBackground?: string
+
+  /**
+   * 点击遮罩层的回调
+   */
+  onClose?: () => void
 }
 
 export interface MySlideCardState {
